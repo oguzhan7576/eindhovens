@@ -21,4 +21,10 @@ module.exports = {
         }(), seconds * 1000)
     }
 
+
+
+
+
 }
+
+bot.login(process.env.token);
