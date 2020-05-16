@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
     var bool = false;
  
     // Kijk na als ticket al gemaakt is.
-    message.guild.channels.forEach((channel) => {
+    forEach(async (channel, id) => { 
+  
  
         // Als ticket is gemaakt, zend bericht.
         if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
