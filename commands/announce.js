@@ -1,4 +1,4 @@
-module.exports = class NewsCommand extends Command {
+module.exports = class NewsCommands extends Commands {
     constructor (client) {
       super(client, {
         name: 'announce',
