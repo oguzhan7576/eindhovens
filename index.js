@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const BotConfig = require("./botconfig.json");
+const botConfig = require("./botconfig.json");
 
 
 const fs = require("fs");
@@ -30,15 +30,15 @@ bot.commands.set(fileGet.help.name, fileGet);
 
 });
 
-
 bot.on("ready", async () => {
 
-    console.log(`${bot.user.username} is online`);
+console.log(`${bot.user.username} is online!`)
 
-    bot.user.setActivity("Eindhoven Roleplay", { type: "STREAMING" });
+bot.user.setActivity("Eindhoven Roleplay", {type: "STREAMING"});
 
-});
+})
 
+//bericht
 bot.on("message", async message => {
     
     if(message.author.bot) return;
@@ -59,22 +59,19 @@ if(commands) commands.run(bot,message, arguments);
 
 
 
+//Bercihtje 
 
-   if(command === `${prefix}ip`){
 
-    return message.channel.send("**IP**:`cfx.re/join/3yb8qr`");
+if(command === `${prefix}ip`){
 
-   }
+    return message.channel.send("*IP*: `cfx.re/join/3yb8qr` ");
 
-   
-   if(command === `${prefix}citybug`){
+}
 
-    return message.channel.send("Probeer deze grafische instellingen: || https://imgur.com/eFKbcKR ||");
 
-   }
-
-  
-
+ 
 });
+
+
 
 bot.login(process.env.token);
