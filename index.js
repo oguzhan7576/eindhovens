@@ -64,12 +64,12 @@ if(commands) commands.run(bot,message, arguments);
 
 client.on("guildMemberAdd", member => {
 
-    var role = member.guild.roles.cache.get("673185618930434068");
+    var role = member.guild.roles.cache.get('673185618930434068');
     if(!role) return;
 
     member.roles.add(role);
 
-    var channel = member.guild.channels.cache.get("711361318690488320");
+    var channel = member.guild.channels.cache.get('711361318690488320');
 
     if(!channel) return;
 
