@@ -1,30 +1,46 @@
-module.exports = {
-    /**
-     * updatePlayerCount
-     * Constantly updates the player count of the server at a steady rate
-     * @param {object} client The client of the bot object
-     * @param {number} seconds The integer amount for the derivate of # of times it refreshes the bot's activity
-     * ```js
-     * const {updatePlayerCount} = require("./utils/")
-     * const { Client } = require('discord.js');
-     * const client = new Client;
-     * updatePlayerCount(client, 10)
-     * // this will update the bot's activity every 10 seconds
-     * ````
-     */
-    updatePlayerCount: (client, seconds) => {
-        const interval = setInterval(function setStatus() {
-            status = `${GetNumPlayerIndices()} player(s)`
-            //console.log(status)
-            client.user.setActivity(status, {type: 'WATCHING'})
-            return setStatus;
-        }(), seconds * 1000)
-    }
+const discord = require("discord.js");
+const BotConfig = require("./botconfig.json");
+
+const bot = new discord.Client();
 
 
+bot.on("ready", async () => {
 
+    console.log(`${bot.user.username} is online`);
 
+    bot.user.setActivity("Eindhoven Roleplay", { type: "PLAYING" });
 
-}
+});
+
+bot.on("message", async message => {
+
+    if(message.author.bot) return;
+  
+   if(message.channel.type === "dm") return; 
+
+   var prefix = BotConfig.prefix;
+
+   var messageArray = message.content.split(" "); 
+
+   var command = messageArray[0];
+
+   var arguments = messageArray.slice(1);
+
+   if(command === `${prefix}ip`){
+
+    return message.channel.send("**IP**:`cfx.re/join/3yb8qr`");
+
+   }
+
+   
+   if(command === `${prefix}citybug`){
+
+    return message.channel.send("Probeer deze grafische instellingen: || https://imgur.com/eFKbcKR ||");
+
+   }
+
+  
+
+});
 
 bot.login(process.env.token);
