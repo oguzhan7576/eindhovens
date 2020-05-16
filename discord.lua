@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
         SetDiscordRichPresenceAsset("big") -- large logo key (string)
         SetDiscordRichPresenceAssetText(GetPlayerName(source)) -- Large logo "hover" text (string)
 
-        SetDiscordRichPresenceAssetSmall("zua") -- small logo key (string)
+        SetDiscordRichPresenceAssetSmall("Eindhoven Roleplay") -- small logo key (string)
         SetDiscordRichPresenceAssetSmallText("Health: "..(GetEntityHealth(player)-100)) -- small logo "hover" text (string)
 
     end
