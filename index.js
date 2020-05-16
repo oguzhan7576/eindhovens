@@ -62,20 +62,6 @@ if(commands) commands.run(bot,message, arguments);
 //Bercihtje 
 
 
-client.on("guildMemberAdd", member => {
-
-    var role = member.guild.roles.cache.get('673185618930434068');
-    if(!role) return;
-
-    member.roles.add(role);
-
-    var channel = member.guild.channels.cache.get('711361318690488320');
-
-    if(!channel) return;
-
-    channel.send(`Welkom op Eindhoven Roleplay ${member} ⚡`);
-
-})
 
 if(command === `${prefix}ip`){
 
@@ -83,7 +69,11 @@ if(command === `${prefix}ip`){
 
 }
 
+if(command === `${prefix}citybug`){
 
+    return message.channel.send("Probeer deze grafische instellingen: || https://imgur.com/eFKbcKR ||");
+
+   }
  
 });
 
