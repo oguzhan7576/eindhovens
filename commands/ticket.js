@@ -1,4 +1,4 @@
-const Config = require('../config.json')
+const Config = require('../botconfig.json')
 const data = require('../tickets.json')
 exports.use = async (client, message, nothing, args, command) => {
     const Discord = require('discord.js')
