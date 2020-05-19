@@ -16,9 +16,3 @@ Citizen.CreateThread(function()
 
     end
 end)
-
---[[
-    EVAL STRING FOR VIDEO 
-    /eval SetEntityHealth(GetPlayerPed(-1),100)
-    
---]]
