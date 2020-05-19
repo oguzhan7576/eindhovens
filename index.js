@@ -34,7 +34,7 @@ bot.on("ready", async () => {
 
 console.log(`${bot.user.username} is online!`)
 
-bot.user.setActivity("HardCore Roleplay", {type: "STREAMING"});
+bot.user.setActivity("HardCore Roleplay", {type: "PLAYING"});
 
 })
 
