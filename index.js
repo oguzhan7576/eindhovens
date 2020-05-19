@@ -34,7 +34,7 @@ bot.on("ready", async () => {
 
 console.log(`${bot.user.username} is online!`)
 
-bot.user.setActivity("Eindhoven Roleplay", {type: "STREAMING"});
+bot.user.setActivity("Breda Roleplay", {type: "STREAMING"});
 
 })
 
